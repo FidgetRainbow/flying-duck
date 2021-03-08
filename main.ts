@@ -6,6 +6,9 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 scene.onHitWall(SpriteKind.Player, function (sprite, location) {
     game.over(false)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, location) {
+    game.over(true)
+})
 let up = false
 let flying_duck: Sprite = null
 tiles.setTilemap(tilemap`level2`)
